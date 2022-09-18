@@ -23,6 +23,4 @@ void beforeEachTest() { //open("ya.ru")
         System.out.println("###   @Test SimpleTestFirst() !");
         Assertions.assertTrue(  3 > 2);
     }
-
-
 }
