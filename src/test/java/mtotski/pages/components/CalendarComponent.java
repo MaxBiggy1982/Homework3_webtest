@@ -1,4 +1,4 @@
-package mTotski.pages.components;
+package mtotski.pages.components;
 
 import static com.codeborne.selenide.Selenide.$;
 

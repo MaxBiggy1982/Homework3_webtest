@@ -1,7 +1,7 @@
-package mTotski.tests;
+package mtotski.tests;
 
 import com.codeborne.selenide.Configuration;
-import mTotski.pages.RegistrationFormPage;
+import mtotski.pages.RegistrationFormPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

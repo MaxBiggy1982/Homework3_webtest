@@ -1,4 +1,4 @@
-package mTotski.tests;
+package mtotski.tests;
 
 import org.junit.jupiter.api.*;
 

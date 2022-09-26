@@ -1,8 +1,8 @@
-package mTotski.pages;
+package mtotski.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import mTotski.pages.components.CalendarComponent;
-import mTotski.pages.components.ResultModal;
+import mtotski.pages.components.CalendarComponent;
+import mtotski.pages.components.ResultModal;
 
 import java.io.File;
 

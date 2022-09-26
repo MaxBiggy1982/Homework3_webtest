@@ -1,4 +1,4 @@
-package mTotski.pages.components;
+package mtotski.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
 
