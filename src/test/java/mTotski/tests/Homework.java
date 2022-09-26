@@ -1,4 +1,4 @@
-package M_Totski;
+package mTotski.tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
@@ -39,10 +39,10 @@ public class Homework {
         $(byText("NCR")).click();
         $(byText("Select City")).click();
         $(byText("Gurgaon")).click();
-     $("#uploadPicture").uploadFromClasspath("VTRUKSRPHR.jpg");
+        $("#uploadPicture").uploadFromClasspath("VTRUKSRPHR.jpg");
         $("#submit").click();
-     //   $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-     // ne rabotaet poochemu v upor ne pojmu   $(".table-responsive").shouldHave(text("Maksim Tytskiy"),
+        //   $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        // ne rabotaet poochemu v upor ne pojmu   $(".table-responsive").shouldHave(text("Maksim Tytskiy"),
         //         text("Tytskiy@gmail.comm"),
         //          text("Male"),
         //           text("1234567890"),
