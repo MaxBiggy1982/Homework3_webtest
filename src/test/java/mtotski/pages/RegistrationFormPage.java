@@ -115,5 +115,7 @@ public class RegistrationFormPage {
         return this;
     }
 
+    public Object setAddress(String address, String state, String city) {
+        return this;
+    }
 }
-

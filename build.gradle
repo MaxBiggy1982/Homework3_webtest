@@ -3,13 +3,16 @@ plugins {
 }
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
     testImplementation(
 "com.codeborne:selenide:6.7.4",
-            'org.junit.jupiter:junit-jupiter:5.4.2')
+            "com.github.javafaker:javafaker:1.0.2",
+            'com.github.pires:obd-java-api:1.0',
+                    'org.junit.jupiter:junit-jupiter:5.4.2')
             testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.4.2")
 }
 

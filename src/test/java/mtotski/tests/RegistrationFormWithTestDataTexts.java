@@ -1,36 +1,35 @@
 package mtotski.tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class Homework {
+public class RegistrationFormWithTestDataTexts extends TestBase {
+    String firstName = "Maksim",
+            lastName = "Tytskiy",
+            email = "Tytskiy@gmail.com",
+            phone = "1234567890",
+            day = "21",
+            month = "November",
+            year = "1982";
 
-    @BeforeAll
-    static void setUP() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
-    }
 
     @Test
     void fillFormTest() {
-        open("/automation-practice-form");
+               open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
-        $("#firstName").setValue("Maksim");
-        $("#lastName").setValue("Tytskiy");
-        $("#userEmail").setValue("Tytskiy@gmail.com");
+        $("#firstName").setValue(firstName);
+        $("#lastName").setValue(lastName);
+        $("#userEmail").setValue(email);
         $("#genterWrapper").$(byText("Male")).click();
-        $("#userNumber").setValue("1234567890");
+        $("#userNumber").setValue(phone);
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOption("November");
-        $(".react-datepicker__year-select").selectOption("1982");
-        $(".react-datepicker__day--021").click();
+        $(".react-datepicker__month-select").selectOption(month);
+        $(".react-datepicker__year-select").selectOption(year);
+        $(".react-datepicker__day--0"+ day).click();
         $("#subjectsInput").setValue("Arts").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
         $("#currentAddress").setValue("Tallinn");
@@ -41,11 +40,12 @@ public class Homework {
         $("#uploadPicture").uploadFromClasspath("VTRUKSRPHR.jpg");
         $("#submit").click();
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".table-responsive").shouldHave(text("Maksim Tytskiy"),
-                text("Tytskiy@gmail.com"),
+        $(".table-responsive").shouldHave(text(firstName),
+                text(lastName),
+                text(email),
                 text("Male"),
-                text("1234567890"),
-                text("21 November,1982"),
+                text(phone),
+                text(day + "," + month +" " + year),
                 text("Arts"),
                 text("Reading"),
                 text("VTRUKSRPHR.jpg"),
