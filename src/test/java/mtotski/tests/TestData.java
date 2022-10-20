@@ -5,7 +5,7 @@ import mtotski.utils.RandomFaker;
 
 import java.util.Locale;
 
-public class TestData{
+public class TestData {
 
     private static final Faker faker = new Faker((new Locale("fi-FI")));
     public static String
@@ -14,7 +14,7 @@ public class TestData{
             email1 = faker.internet().emailAddress(),
             gender1 = faker.demographic().sex(),
             number1 = faker.phoneNumber().subscriberNumber(10),
-            day = String.valueOf(faker.number().numberBetween(10, 31)),
+            day = String.valueOf(faker.number().numberBetween(1, 31)),
             month = RandomFaker.getRandomMonth(),
             year = String.valueOf(faker.number().numberBetween(1900, 2000)),
             subjects = RandomFaker.getRandomSubject(),
@@ -23,7 +23,7 @@ public class TestData{
             picture = "VTRUKSRPHR.jpg",
             address = faker.address().fullAddress(),
             state = "NCR",
+            birthday1 = String.valueOf(faker.number().numberBetween(1, 31)),
             city = RandomFaker.getRandomCity();
-        //    birthday1 = String.valueOf(faker.number().numberBetween(1, 31)),
 }
 

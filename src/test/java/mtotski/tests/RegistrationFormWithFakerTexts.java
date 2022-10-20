@@ -6,7 +6,9 @@ import org.junit.jupiter.api.Test;
 import static mtotski.tests.TestData.*;
 
 public class RegistrationFormWithFakerTexts extends TestBase {
-    RegistrationFormPage registrationFormPage = new RegistrationFormPage();    @Test
+    RegistrationFormPage registrationFormPage = new RegistrationFormPage();
+
+    @Test
     void fillFormTest() {
         registrationFormPage
                 .openPage()
@@ -38,4 +40,4 @@ public class RegistrationFormWithFakerTexts extends TestBase {
     }
 
 
-    }
+}

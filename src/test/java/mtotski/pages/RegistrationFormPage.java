@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationFormPage {
-    private CalendarComponent calendarComponent  = new CalendarComponent();
+    private CalendarComponent calendarComponent = new CalendarComponent();
     private ResultModal resultModal = new ResultModal();
     private final static String TITLE_TEXT = "Student Registration Form";
 
@@ -27,8 +27,7 @@ public class RegistrationFormPage {
             addressInput = $("#currentAddress"),
             stateInput = $("#react-select-3-input"),
             cityInput = $("#react-select-4-input"),
-            submitButton = $("#submit")
-                    ;
+            submitButton = $("#submit");
 
 
     public RegistrationFormPage openPage() {
@@ -38,43 +37,43 @@ public class RegistrationFormPage {
         return this;
     }
 
-    public RegistrationFormPage setFirstName(String value){
+    public RegistrationFormPage setFirstName(String value) {
         $(firstNameInput).setValue(value);
         return this;
     }
 
-    public RegistrationFormPage setLastName(String value){
+    public RegistrationFormPage setLastName(String value) {
         $(lastNameInput).setValue(value);
         return this;
     }
 
-    public RegistrationFormPage setEmail(String value){
+    public RegistrationFormPage setEmail(String value) {
         $(emailInput).setValue(value);
         return this;
     }
 
-    public RegistrationFormPage setGenderWrapper(String value){
+    public RegistrationFormPage setGenderWrapper(String value) {
         $(genderWrapper).$(byText(value)).click();
         return this;
     }
 
-    public RegistrationFormPage setPhoneNumber(String value){
+    public RegistrationFormPage setPhoneNumber(String value) {
         $(phoneNumberInput).setValue(value);
         return this;
     }
 
-    public RegistrationFormPage setBirthdate(String year, String month, String day){
+    public RegistrationFormPage setBirthdate(String year, String month, String day) {
         $(dateOfBirthInput).click();
-        calendarComponent.setDate(year,month,day);
+        calendarComponent.setDate(year, month, day);
         return this;
     }
 
-    public RegistrationFormPage setSubjects(String value){
+    public RegistrationFormPage setSubjects(String value) {
         $(subjectsInput).setValue(value).pressTab();
         return this;
     }
 
-    public RegistrationFormPage setHobbies(String value){
+    public RegistrationFormPage setHobbies(String value) {
         $(hobbiesWrapper).$(byText(value)).click();
         return this;
     }
@@ -106,7 +105,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage checkResult(String key, String value) {
-        resultModal.checkResult(key,value);
+        resultModal.checkResult(key, value);
         return this;
     }
 

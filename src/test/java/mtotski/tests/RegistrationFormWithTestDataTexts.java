@@ -18,7 +18,7 @@ public class RegistrationFormWithTestDataTexts extends TestBase {
 
     @Test
     void fillFormTest() {
-               open("/automation-practice-form");
+        open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
         $("#firstName").setValue(firstName);
@@ -29,7 +29,7 @@ public class RegistrationFormWithTestDataTexts extends TestBase {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(year);
-        $(".react-datepicker__day--0"+ day).click();
+        $(".react-datepicker__day--0" + day).click();
         $("#subjectsInput").setValue("Arts").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
         $("#currentAddress").setValue("Tallinn");
@@ -45,7 +45,7 @@ public class RegistrationFormWithTestDataTexts extends TestBase {
                 text(email),
                 text("Male"),
                 text(phone),
-                text(day + "," + month +" " + year),
+                text(day + "," + month + " " + year),
                 text("Arts"),
                 text("Reading"),
                 text("VTRUKSRPHR.jpg"),

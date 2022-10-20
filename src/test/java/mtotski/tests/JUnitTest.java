@@ -10,17 +10,20 @@ public class JUnitTest {
     static void setUp() {
         System.out.println("### @BeforeAll !");
     }
-@AfterAll
-static void tearDown(){
-        System.out.println(("### @AFterALL !"));
-}
-@BeforeEach
-void beforeEachTest() { //open("ya.ru")
 
-}
+    @AfterAll
+    static void tearDown() {
+        System.out.println(("### @AFterALL !"));
+    }
+
+    @BeforeEach
+    void beforeEachTest() { //open("ya.ru")
+
+    }
+
     @Test
     void webpageTest() {
         System.out.println("###   @Test SimpleTestFirst() !");
-        Assertions.assertTrue(  3 > 2);
+        Assertions.assertTrue(3 > 2);
     }
 }
