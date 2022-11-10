@@ -14,8 +14,9 @@ public class TestData {
             email1 = faker.internet().emailAddress(),
             gender1 = faker.demographic().sex(),
             number1 = faker.phoneNumber().subscriberNumber(10),
-            day = String.valueOf(faker.number().numberBetween(1, 31)),
-            month = RandomFaker.getRandomMonth(),
+            day = String.format("%02d", faker.number().numberBetween(1,28)),
+
+    month = RandomFaker.getRandomMonth(),
             year = String.valueOf(faker.number().numberBetween(1900, 2000)),
             subjects = RandomFaker.getRandomSubject(),
             hobbies = RandomFaker.getRandomHobbies(),
@@ -23,7 +24,6 @@ public class TestData {
             picture = "VTRUKSRPHR.jpg",
             address = faker.address().fullAddress(),
             state = "NCR",
-            birthday1 = String.valueOf(faker.number().numberBetween(1, 31)),
             city = RandomFaker.getRandomCity();
 }
 
